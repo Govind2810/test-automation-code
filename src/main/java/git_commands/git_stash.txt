@@ -1,0 +1,71 @@
+* git stash is a powerful command in Git that allows you to temporarily save (stash) changes you’ve made to your working directory 
+without committing them.
+
+# Make some changes to your files
+
+# Stash the changes
+git stash
+
+# Your working directory is now clean
+# You can switch branches or work on something else
+
+# To see the list of stashed changes
+git stash list
+
+# To apply the most recent stash
+git stash apply
+
+# To apply and remove the stash
+git stash pop
+
+# To drop a specific stash (e.g., stash@{0})
+git stash drop stash@{0}
+
+
+Example:
+HP@DESKTOP-UCTN10P MINGW64 /d/VISHAL/eclipse-workspace/selenium-automation (main)
+$ git pull
+error: Your local changes to the following files would be overwritten by merge:
+        src/main/java/interview_questions/JavaScriptExecutorExamples.java
+Please commit your changes or stash them before you merge.
+Aborting
+Updating 7f9fd53..1384182
+
+HP@DESKTOP-UCTN10P MINGW64 /d/VISHAL/eclipse-workspace/selenium-automation (main)
+$ git stash
+Saved working directory and index state WIP on main: 7f9fd53 Initial commit
+
+HP@DESKTOP-UCTN10P MINGW64 /d/VISHAL/eclipse-workspace/selenium-automation (main)
+$ git status
+On branch main
+Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+nothing to commit, working tree clean
+
+HP@DESKTOP-UCTN10P MINGW64 /d/VISHAL/eclipse-workspace/selenium-automation (main)
+$ git pull
+Updating 7f9fd53..1384182
+Fast-forward
+ src/main/java/interview_questions/JavaScriptExecutorExamples.java | 4 ----
+ 1 file changed, 4 deletions(-)
+
+HP@DESKTOP-UCTN10P MINGW64 /d/VISHAL/eclipse-workspace/selenium-automation (main)
+$ git stash list
+stash@{0}: WIP on main: 7f9fd53 Initial commit
+
+HP@DESKTOP-UCTN10P MINGW64 /d/VISHAL/eclipse-workspace/selenium-automation (main)
+$ git stash apply
+Auto-merging src/main/java/interview_questions/JavaScriptExecutorExamples.java
+CONFLICT (content): Merge conflict in src/main/java/interview_questions/JavaScriptExecutorExamples.java
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Unmerged paths:
+  (use "git restore --staged <file>..." to unstage)
+  (use "git add <file>..." to mark resolution)
+        both modified:   src/main/java/interview_questions/JavaScriptExecutorExamples.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HP@DESKTOP-UCTN10P MINGW64 /d/VISHAL/eclipse-workspace/selenium-automation (main)
