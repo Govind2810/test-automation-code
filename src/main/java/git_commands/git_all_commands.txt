@@ -1,0 +1,39 @@
+Basic Commands:
+	git init
+	git clone <repository-url>
+	git add <file-name>
+	git commit -m "Commit message"
+	git status
+	git log
+	
+Branching and Merging:
+	git branch
+	git checkout <branch-name>
+	git merge <branch-name>
+	git rebase <branch-name>
+	
+Remote Repositories:
+	git remote -v
+	git fetch
+	git pull
+	git push
+	
+Stashing:
+	git stash
+	git stash list
+	git stash apply
+	git stash pop
+
+Viewing Changes:
+	git diff
+	git diff <branch-name>
+	git show <commit-id>
+	
+Undoing Changes:
+	git reset <file>
+	git reset --hard <commit-id>
+	git revert <commit-id>
+	
+Deleting Branches and Files:
+	git branch -d <branch-name>
+	git rm <file>
