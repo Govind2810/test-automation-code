@@ -1,0 +1,14 @@
+# Ignore classpath file
+.classpath
+
+# Ignore project file
+.project
+
+# Ignore settings directory
+.settings/
+
+# Ignore target directory
+target/
+
+# Ignore test output directory
+test-output/

@@ -1,0 +1,48 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="RetryLogicSuite" parallel="false" thread-count="1" verbose="1">
+	
+	<!-- 
+	In TestNG, the verbose level controls the amount of logging that happens on the console.
+	add the verbose="10" attribute to the <suite> tag to have TestNG print the most detailed information available 
+		to your console output during execution
+	-->
+
+	<!-- Suite-level Parameters (Optional) -->
+	<parameter name="baseURL" value="http://example.com" />
+	<parameter name="browser" value="chrome" />
+
+	<!-- Listeners (Optional) -->
+	<listeners>
+		<listener class-name="testng_retrylogic.MyAnnotationTransformer" />
+	</listeners>
+
+	<!-- Test Level -->
+	<test name="Retry Tests" parallel="false" thread-count="1">
+
+		<!-- Test-level Parameters (Optional) -->
+		<parameter name="username" value="testUser" />
+		<parameter name="password" value="password123" />
+
+		<!-- Groups (Optional) -->
+		<groups>
+			<run>
+				<include name="smoke" />
+				<exclude name="regression" />
+			</run>
+		</groups>
+
+		<!-- Classes to be Included in the Test -->
+		<classes>
+			<class name="testng_retrylogic.TestClass">
+				<!-- Specify Methods (Optional) -->
+				<methods>
+					<include name="testMethod1" />
+					<include name="testMethod2" />
+					<include name="testMethod3" />
+					<exclude name="testMethod4" />
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+</suite>
