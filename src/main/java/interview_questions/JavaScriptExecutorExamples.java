@@ -91,10 +91,6 @@ public class JavaScriptExecutorExamples {
 
 	}
 
-	public static void main(String[] args) {
-
-	}
-
 	/*
 	 * 
 	 * The JavaScriptExecutor interface in Selenium is used to execute JavaScript
