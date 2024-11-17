@@ -91,6 +91,11 @@ public class JavaScriptExecutorExamples {
 
 	}
 
+	public static void main(String[] args) {
+
+		System.out.println("JavaScript Executor Example");
+	}
+
 	/*
 	 * 
 	 * The JavaScriptExecutor interface in Selenium is used to execute JavaScript
