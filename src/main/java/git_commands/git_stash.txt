@@ -21,6 +21,7 @@ git stash pop
 # To drop a specific stash (e.g., stash@{0})
 git stash drop stash@{0}
 
+
 Example:
 HP@DESKTOP-UCTN10P MINGW64 /d/VISHAL/eclipse-workspace/selenium-automation (main)
 $ git pull
